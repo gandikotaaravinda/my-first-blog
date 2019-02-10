@@ -16,6 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+admin.site.site_header = 'Evemate admin'
+admin.site.site_title = 'Evemate admin'
+admin.site.site_url = 'http://gandikotaaravinda.pythonanywhere.com/'
+admin.site.index_title = 'Evemate administration'
+admin.empty_value_display = '**Empty**'
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
