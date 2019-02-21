@@ -50,5 +50,5 @@ class Comment(models.Model):
 #def update_user_profile(sender, instance, created, **kwargs):
    # if created:
        # Profile.objects.create(user=instance)
-    3instance.profile.save()
+    #instance.profile.save()
 # Create your models here.
