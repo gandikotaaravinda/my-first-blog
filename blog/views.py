@@ -1,18 +1,18 @@
-from django.contrib.auth import login
+#from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404
-from django.contrib.auth import login, authenticate
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.sites.shortcuts import get_current_site
-from django.utils.encoding import force_bytes, force_text
-from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
-from django.template.loader import render_to_string
-from .tokens import account_activation_token
+#from django.contrib.auth import login, authenticate
+#from django.contrib.auth.forms import UserCreationForm
+#from django.contrib.sites.shortcuts import get_current_site
+#from django.utils.encoding import force_bytes, force_text
+#from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+#from django.template.loader import render_to_string
+#from .tokens import account_activation_token
 from django.shortcuts import redirect
 from django.utils import timezone
 from .models import Post, Comment
-from .forms import PostForm, CommentForm, SignUpForm
+from .forms import PostForm, CommentForm
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
